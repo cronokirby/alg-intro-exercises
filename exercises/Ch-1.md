@@ -27,3 +27,17 @@ It would be unacceptable for commercial planes, destined for personal travel,
 to sometimes be routed to the wrong place.
 However, in terms of shipping freight across planes, it's acceptable to settle with
 a satisfying, but not necessarily optimal distribution of products across the planes.
+
+
+## 1.2
+
+#### 1
+Consider an application that plays music. Not even acknowledging the algorithms
+necessary to implement audio itself, displaying songs to the user in different
+ways requires sorting.
+
+#### 2
+Between 1 and 43 elements (on this machine) insertion sort is faster.
+
+#### 3
+The smallest value is roughly 0.1.
