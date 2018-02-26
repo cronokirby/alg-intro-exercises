@@ -21,7 +21,7 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Ch2\InsertionSort.h">
+    <ClInclude Include="Ch2\1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -32,7 +32,7 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Ch2\InsertionSort.cpp">
+    <ClCompile Include="Ch2\1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

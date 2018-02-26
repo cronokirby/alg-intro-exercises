@@ -1,20 +1,16 @@
 #include "stdafx.h"
 #include <iostream>
 
-#include "Ch2\InsertionSort.h"
+#include "Ch2\1.h"
 
 
 int main() {
-	int arr[10] = { 34, 3, 2, 56, 2, 6, 7, 34, 1, 6 };
-	incInsertionSort(arr, 10);
-	for (auto i = 0; i < 10; i++) {
-		std::cout << arr[i] << " ";
+	bool a[2] = { 1, 0 };
+	bool b[2] = { 1, 1 };
+	auto c = addBin(a, b, 2);
+	for (auto i = 0; i < 3; i++) {
+		std::cout << c[i];
 	}
-	decInsertionSort(arr, 10);
-	for (auto i = 0; i < 10; i++) {
-		std::cout << arr[i] << " ";
-	}
-	std::cout << linearSearch(100, arr, 10);
     return 0;
 }
 

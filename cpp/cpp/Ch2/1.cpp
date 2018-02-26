@@ -34,3 +34,15 @@ int linearSearch(int v, int arr[], size_t size) {
 	}
 	return -1;
 }
+
+bool* addBin(bool a[], bool b[], size_t n) {
+	auto c = new bool[n + 1] { 0 };
+	bool carry = false;
+	for (auto i = n; i > 0; i--) {
+		auto j = i - 1;
+		c[i] = (a[j] != b[j]) != carry;
+		carry = a[j] && b[j];
+	}
+	c[0] = carry;
+	return c;
+}
