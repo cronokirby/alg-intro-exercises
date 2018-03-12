@@ -41,31 +41,25 @@ pub fn linear_search<T : Eq>(el: &T, a: &[T]) -> Option<usize> {
 fn merge<T>(arr: &mut [T], left: &[T], right: &[T])
     where T : Ord, T : Copy
 {
-    let mut l = 0;
-    let mut r = 0;
+    let mut left = left.iter().peekable();
+    let mut right = right.iter().peekable();
     for x in arr {
-        if let Some(&ll) = left.get(l) {
-
-        } else if let Some(&rr) = right.get(r) {
-            r += 1;
-            *x = rr;
-        }
-        match (left.get(l), right.get(r)) {
-            (Some(&ll), Some(&rr)) => {
+        match (left.peek(), right.peek()) {
+            (Some(&&ll), Some(&&rr)) => {
                 if ll < rr {
-                    l += 1;
+                    left.next();
                     *x = ll;
                 } else {
-                    r += 1;
+                    right.next();
                     *x = rr;
                 }
             }
-            (Some(&ll), None) => {
-                l += 1;
+            (Some(&&ll), None) => {
+                left.next();
                 *x = ll;
             }
-            (None, Some(&rr)) => {
-                r += 1;
+            (None, Some(&&rr)) => {
+                right.next();
                 *x = rr;
             }
             (None, None) => {}
@@ -93,4 +87,49 @@ pub fn merge_sort<T>(arr: &mut [T])
         }
         chunk_size *= 2;
     }
+}
+
+/// Sorts by running insertion sort on chunks of size usize, then applies merge sort.
+pub fn insert_and_merge_sort<T>(arr: &mut [T], chunk_size: usize)
+    where T : Ord, T : Copy
+{
+    let mut chunk_size = chunk_size;
+    for chunk in arr.chunks_mut(chunk_size) {
+        insertion_sort(chunk);
+    }
+    while chunk_size <= arr.len() {
+        for chunk in arr.chunks_mut(chunk_size * 2) {
+            let mid_point = if chunk_size < chunk.len() {
+                chunk_size
+            } else {
+                chunk.len() / 2
+            };
+            let mut chunk_copy = chunk.to_owned();
+            let (left, right) = chunk_copy.split_at(mid_point);
+            merge(chunk, left, right);
+        }
+        chunk_size *= 2;
+    }
+}
+
+pub fn bubble_sort<T : PartialOrd>(arr: &mut [T]) {
+    for i in 1..arr.len()  {
+        for j in (i..arr.len()).rev() {
+            if arr[j] < arr[j - 1] {
+                arr.swap(j, j - 1);
+            }
+        }
+    }
+}
+
+fn naive_horner(x: i32, coefficients: &[i32]) -> i32 {
+    let mut sum = 0;
+    for (i, a) in coefficients.iter().enumerate() {
+        let mut xk = 1;
+        for _ in 0..i {
+            xk *= x;
+        }
+        sum += a * xk;
+    }
+    sum
 }

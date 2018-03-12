@@ -40,3 +40,20 @@ fn merge_sort_test() {
     merge_sort(&mut arr);
     assert_eq!(r, arr);
 }
+
+#[test]
+fn merge_insort_test() {
+    let mut arr1: Vec<_> = (1..20).rev().collect();
+    let r: Vec<_> = (1..20).collect();
+    insert_and_merge_sort(&mut arr1, 8);
+    insert_and_merge_sort(&mut arr1, 1);
+    assert_eq!(arr1, r);
+}
+
+#[test]
+fn bubble_sort_test() {
+    let mut arr1: Vec<_> = (1..20).rev().collect();
+    let r: Vec<_> = (1..20).collect();
+    bubble_sort(&mut arr1);
+    assert_eq!(arr1, r);
+}

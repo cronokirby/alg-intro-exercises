@@ -46,3 +46,32 @@ We can check if the task has already been done. E.G. if a list has already been 
 Let $S(k) = T(2^k)$, $S(1) = 2 = k2^k$, $S(k + 1) = 2s(k) + 2^{(k+1)}
   = 2(k2^k) + 2^{(k+1)} = (k + 1)2^{(k + 1)}
 $
+
+## Problems
+
+#### 2.1
+
+**a)** worst case is running time for insertion sort is $n^2$, so $k^2$ for our lists. We have $n/k$ lists to sort, which leaves us with $nk$.
+**b)** Our tree only has depth $lg(n/k)$, instead of $lg(n)$, which lets us merge in $\Theta(n lg(n/k))$
+**c)** With $k = 1$, $\Theta(nk + nlg(n/k))$ becomes $\Theta(n + nlg(n))$
+  = $\Theta(nlg(n))$
+**d)** We'd have to choose the chunking size via benchmarking of some kind.
+
+#### 2.2
+
+**b)** The array [1..i] is always sorted. Initially it contains one element.
+        At every iteration a new element gets added in the right place. When the loop terminates, the entire array is thus sorted.
+
+**d)** $\Theta(n^2)$
+
+#### 2.3
+**a)** $\Theta(n)$
+**b)** The naive form runs $\Theta(n^2)$, since we need an extra loop to calculate powers of x.
+**c)** Initially true because $ y = 0$, if true for $i = m$, will be true
+        for $m - 1$, since the new operation tacks on the empty $k = 0$ coefficient, and increases all the old powers by 1.
+
+#### 2.4
+
+**a)** $(8, 6), (8, 1), (6, 1), (2, 1), (3, 1)$
+**b)** The elements in order $n..1$, with $n(n-1)/2$ inversions.
+**c)** The number of swaps necessary is the number of inversions in the array.
