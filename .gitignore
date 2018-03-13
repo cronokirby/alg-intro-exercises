@@ -2,3 +2,5 @@ cpp/Debug
 cpp/cpp/Debug
 cpp/.vs
 rust/target
+.vscode
+a.exe
