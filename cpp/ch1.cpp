@@ -127,6 +127,7 @@ int naive_horner(int x, const Array& coefs) {
         }
         sum += coefs.arr[i] * xk;
     }
+    return sum;
 }
 
 
