@@ -16,3 +16,13 @@ $c_{0} \leq \frac{1}{2} \leq c_{1}$, which can be easily satisfied.
 
 
 #### 2
+Given $c_{0}n^b \leq (n + a)^b \leq c_{1}n^b$, we can divide by the largest term:
+$c_{0} \leq 1 + \cdots \leq c_{1}$. For sufficiently large n, the extra terms
+will all be bounded by $1$, so it's easy to find constants that satisfy the
+relationship.
+
+
+#### 3
+The running time of an algorithm being $O(n^2)$ is providing an upper bound
+for this running time. Providing a lower bound for the upper bound is thus
+nonsensical. "This algorithm can't take more time than at least this".
