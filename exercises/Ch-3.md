@@ -26,3 +26,23 @@ relationship.
 The running time of an algorithm being $O(n^2)$ is providing an upper bound
 for this running time. Providing a lower bound for the upper bound is thus
 nonsensical. "This algorithm can't take more time than at least this".
+
+
+#### 4
+$2^{n + 1} = 2 \dot 2^b$, differing only by a constant: thus we have $O(2^n)$.
+
+$2^{2n} \leq c(2^n)$
+$2^n \leq c$. The last part cannot be true, as the growth of $2^n$ is
+unbounded.
+
+
+#### 6
+Let's call the best and worst case running times of an algorithm
+$b(n)$ and $w(n)$, respectively.
+
+If $b(n) < w(n)$ then $O(b(n))$ does not provide an upper bound
+for the running time of an algorithm, since the algorithm can run
+in worse time.
+
+Similarly, if $b(n) < w(n)$, then $O(w(n))$ does not provide a lower bound for
+the running time of the algorithm, given that the algorithm can run in $b(n)$.
