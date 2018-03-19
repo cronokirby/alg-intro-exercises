@@ -1,5 +1,6 @@
 ## 3.1
 
+
 #### 1
 Let $f(n)$ and $g(n)$ be nonnegative functions. Let's assume that $f(n) >= g(n)$,
 for sufficiently large $n$ (which one we choose doesn't matter, as we will be able
@@ -80,3 +81,20 @@ $O(g(n, m)) = \{f(n, m) : 0 \leq f(n, m) \leq c g(n, m)\}$
 $\Omega(g(n, m)) = \{f(n, m) : 0 \leq c g(n, m) \leq f(n, m)\}$
 
 $\Theta(g(n, m)) = \{f(n, m) : c_0 g(n, m) \leq f(n, m) \leq c_1 g(n, m) \}$
+
+
+## 3.2
+
+
+#### 1
+Given $n < m$, we have $f(n) \leq f(m)$, and $g(n) \leq g(m)$,
+since $f$ and $g$ are monotonic. Now we can simply add both sides of
+those equations to get: $f(n) + g(n) \leq f(m) + g(m)$.
+
+Given $n, m > 0$, $n \leq m \implies n * n leq m * m $, which clearly allows to
+state that $f(n)g(n) \leq f(m)g(m)$.
+
+
+#### 2
+$a^{log_b c} = e^{ln a log_b c} = e^{ln a \frac{ln c}{ln b}} = e^{\frac{ln a}{ln b} ln c
+= e^{log_b a ln c} = c^{log_b a}$
