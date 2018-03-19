@@ -59,3 +59,24 @@ in worse time.
 
 Similarly, if $b(n) < w(n)$, then $O(w(n))$ does not provide a lower bound for
 the running time of the algorithm, given that the algorithm can run in $b(n)$.
+
+
+#### 7
+We have:
+
+$g(n) \in o(g(n)) \implies 0 \leq g(n) < c g(n)$, and:
+
+$g(n) \in \omega(g(n)) \implies cg(n) < g(n) \leq 0$, giving us:
+
+$c_{0} < 1 < c_{1}, \forall c_{0}, c{1}$, which clearly
+can't be satisfied.
+
+
+#### 8
+Given constants $c, n_0, m_0 > 0$, for all $n \geq n_0$ or $m \geq m_0$:
+
+$O(g(n, m)) = \{f(n, m) : 0 \leq f(n, m) \leq c g(n, m)\}$
+
+$\Omega(g(n, m)) = \{f(n, m) : 0 \leq c g(n, m) \leq f(n, m)\}$
+
+$\Theta(g(n, m)) = \{f(n, m) : c_0 g(n, m) \leq f(n, m) \leq c_1 g(n, m) \}$
