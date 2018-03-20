@@ -91,13 +91,9 @@ Given $n < m$, we have $f(n) \leq f(m)$, and $g(n) \leq g(m)$,
 since $f$ and $g$ are monotonic. Now we can simply add both sides of
 those equations to get: $f(n) + g(n) \leq f(m) + g(m)$.
 
-Given $n, m > 0$, $n \leq m \implies n * n leq m * m $, which clearly allows to
-state that $f(n)g(n) \leq f(m)g(m)$.
-
 
 #### 2
-$a^{log_b c} = e^{ln a log_b c} = e^{ln a \frac{ln c}{ln b}} = e^{\frac{ln a}{ln b} ln c
-= e^{log_b a ln c} = c^{log_b a}$
+$a^{log_{b} c} = e^{ln a log_{b} c} = e^{ln a \frac{ln c}{ln b}} = e^{\frac{ln a}{ln b} ln c} = e^{log_{b} a ln c} = c^{log_{b} a}$
 
 
 #### 3
@@ -119,19 +115,19 @@ $x = \frac{1 \pm \sqrt{1 + 4}}{2} = \frac{1 \pm \sqrt{5}}{2}$
 
 
 #### 7
-For $i = 0$, we have $\frac{1 - 1}{sqrt{5}} = 0$, which is correct.
+For $i = 0$, we have $\frac{1 - 1}{\sqrt{5}} = 0$, which is correct.
 
 
 Now, let us first note that $\phi^2 = \frac{1 + 5 + 2\sqrt{5}}{2} = \frac{3 + \sqrt{5}}{2} = 1 + \phi$,
-with the same property holding for the conjugate $\hat{\phi}}$.
+with the same property holding for the conjugate $\hat{\phi}$.
 
 Assuming property holds for $i = n$, and $i = n + 1$, we have:
-$F_{n + 2} = \frac{\phi^n - \hat{\phi}^n}{\sqrt{5}} + \frac{\phi^{n+1} - \hat{\phi}^{n + 1}}{\sqrt{5}},
+$F_{n + 2} = \frac{\phi^n - \hat{\phi}^n}{\sqrt{5}} + \frac{\phi^{n+1} - \hat{\phi}^{n + 1}}{\sqrt{5}}$,
 from which we can get:
 
 $\frac{(1 + \phi)\phi^n - (1 + \hat{\phi})\hat{phi}^n}{\sqrt{5}}$, using the above statement, we have:
 
-$\frac{phi^{n + 2} - \hat{\phi}^{n + 2}}{\sqrt{5}}$, which completes the proof.
+$\frac{\phi^{n + 2} - \hat{\phi}^{n + 2}}{\sqrt{5}}$, which completes the proof.
 
 
 ## Problems
