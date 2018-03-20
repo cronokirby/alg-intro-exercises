@@ -150,3 +150,15 @@ dividing by $n^k$ leaves the left side finite.
 which is only the case if $k > d$
 
 **e)** Similar argument, but with the reverse inequality.
+
+
+#### 3.2
+
+|A         |B                |$O$|$o$|$\Omega$|$\omega$|$\Theta$|
+|----------|-----------------|---|---|---|---|---|
+|$lg^k(n)$ |$n^\eta$         |yes|yes|no |no |no |
+|$n^k$     |$c^n$            |yes|yes|no |no |no |
+|$\sqrt{n}$|$n^{sin(n)}$     |yes|yes|yes|yes|yes|
+|$2^n$     |$2^{\frac{n}{2}}$|no |no |yes|yes|no |
+|$n^{lg c}$|$c^{lg n}$       |yes|yes|yes|yes|yes|
+|$lg(n!)$  |$lg(n^n)$        |yes|yes|no |no |no |
