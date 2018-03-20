@@ -98,3 +98,37 @@ state that $f(n)g(n) \leq f(m)g(m)$.
 #### 2
 $a^{log_b c} = e^{ln a log_b c} = e^{ln a \frac{ln c}{ln b}} = e^{\frac{ln a}{ln b} ln c
 = e^{log_b a ln c} = c^{log_b a}$
+
+
+#### 3
+$lg(n!) \leq lg(n^n) \leq nlg(n)$, therefore:
+$lg(n!) = \Theta(nlg(n))$
+
+$n! \leq n^n \implies n! < cn^n$, where $c > 1$ is some constant. This implies
+that $n! = o(n^n)$
+
+Clearly, for any $n \geq 3$, $2^n \leq n!$ since the factorial contains the same
+amount of terms in the multiplication, but some are larger than 2. Because
+of this, we can see that $n! = \omega(2^n)$
+
+
+#### 6
+Given $x^2 = x + 1 \iff -x^2 + x + 1 = 0$, we have:
+
+$x = \frac{1 \pm \sqrt{1 + 4}}{2} = \frac{1 \pm \sqrt{5}}{2}$
+
+
+#### 7
+For $i = 0$, we have $\frac{1 - 1}{sqrt{5}} = 0$, which is correct.
+
+
+Now, let us first note that $\phi^2 = \frac{1 + 5 + 2\sqrt{5}}{2} = \frac{3 + \sqrt{5}}{2} = 1 + \phi$,
+with the same property holding for the conjugate $\hat{\phi}}$.
+
+Assuming property holds for $i = n$, and $i = n + 1$, we have:
+$F_{n + 2} = \frac{\phi^n - \hat{\phi}^n}{\sqrt{5}} + \frac{\phi^{n+1} - \hat{\phi}^{n + 1}}{\sqrt{5}},
+from which we can get:
+
+$\frac{(1 + \phi)\phi^n - (1 + \hat{\phi})\hat{phi}^n}{\sqrt{5}}$, using the above statement, we have:
+
+$\frac{phi^{n + 2} - \hat{\phi}^{n + 2}}{\sqrt{5}}$, which completes the proof.
