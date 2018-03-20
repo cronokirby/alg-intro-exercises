@@ -162,3 +162,24 @@ which is only the case if $k > d$
 |$2^n$     |$2^{\frac{n}{2}}$|no |no |yes|yes|no |
 |$n^{lg c}$|$c^{lg n}$       |yes|yes|yes|yes|yes|
 |$lg(n!)$  |$lg(n^n)$        |yes|yes|no |no |no |
+
+
+#### 3.4
+
+**a)** False: $f \leq cg$ contradicts $g \leq cf$, unless $g = \Theta(f)$, so
+this can't hold for all functions $f$ and $g$.
+
+**b)** If $g(n) = 0$, this is false.
+
+**c)** This is true because of the monotonicity of the logarithm.
+
+**d)** This is true since $2^n$ is monotonic.
+
+**e)** $f \leq cf^2 \iff 1 \leq cf$, which is clearly true.
+
+**f)** $f \leq cg \iff cf \leq g \iff g \geq cf$
+
+**g)** This is not the case for exponential functions, as the constant doesn't
+come out of the function.
+
+**h)** Counterexample: $n = o(n^2)$, but $n + n^2 = \Theta(n^2)$.
