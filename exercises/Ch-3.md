@@ -132,3 +132,21 @@ from which we can get:
 $\frac{(1 + \phi)\phi^n - (1 + \hat{\phi})\hat{phi}^n}{\sqrt{5}}$, using the above statement, we have:
 
 $\frac{phi^{n + 2} - \hat{\phi}^{n + 2}}{\sqrt{5}}$, which completes the proof.
+
+
+## Problems
+
+
+#### 3.1
+
+**a)** We have $n^d + \cdots \leq n^k$, and if $k \geq d$, then
+dividing by $n^k$ leaves the left side finite.
+
+**b)** Same as the above argument, but with reverse inequality.
+
+**c)** For both of the above to be true, $k = d$ must be true.
+
+**d)** If $k = d$ then $\lim_{n \to \inf} \frac{n^d + \cdots}{n^k} \neq 0$,
+which is only the case if $k > d$
+
+**e)** Similar argument, but with the reverse inequality.
