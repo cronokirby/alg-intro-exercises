@@ -49,6 +49,7 @@ def max_subarray(arr):
     return _max_subarray(arr, 0, len(arr))
 
 
+# Note: a slight modification of Kadane's algorithm
 def linear_max_subarray(arr):
     max_here = max_so_far = arr[0]
     first_ind = 0
