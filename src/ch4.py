@@ -68,3 +68,15 @@ def linear_max_subarray(arr):
     # at the second element. And an extra for the last_ind, since
     # arr[first_ind:last_ind] should be the max subarray.
     return max_so_far, first_ind + 1, last_ind + 2
+
+
+## 4.2
+
+def square_matrix_multiply(a, b):
+    rows = len(a)
+    c = [[0 for _ in range(rows)] for _ in range(rows)]
+    for i in range(rows):
+        for j in range(rows):
+            for k in range(rows):
+                c[i][j] += a[i][k] * b[k][j]
+    return c
