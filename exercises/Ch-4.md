@@ -133,3 +133,9 @@ we need.
 #### 8
 Substituting, we get $n^2 + n$, where we can subtract $n$
 once again to get what we need.
+
+
+## 4.3
+
+This section is difficult to explore textually, and recursion trees are more of an "art" than a science.
+The formal recurrence substitutions were already covered to a certain extent in the previous section.
