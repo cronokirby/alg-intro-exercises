@@ -171,3 +171,7 @@ The formal recurrence substitutions were already covered to a certain extent in 
     T(n) = \Theta(n^2)
   \end{aligned}
   $$
+
+#### 2
+For $a = 50$, $log_{4} a > log_{2} 7$, so $a = 49$ is the largest such that
+$T(n) = aT(n / 4) + \Theta(n^2) is asymptotically faster than Strassen's algorithm.
