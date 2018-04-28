@@ -120,8 +120,8 @@ Using $c(1 + n lg(n))$ solves this problem.
 #### 6
 $$
 \begin{aligned}
-  T(n) &= 2T((n / 2) + 17) + n
-  &= 2cn lg(n + 34) - 2cn + n
+  T(n) &= 2T((n / 2) + 17) + n\\
+  &= 2cn lg(n + 34) - 2cn + n\\
   &\leq 2cn lg(n)
 \end{aligned}
 $$
@@ -135,7 +135,39 @@ Substituting, we get $n^2 + n$, where we can subtract $n$
 once again to get what we need.
 
 
-## 4.3
+## 4.4
 
 This section is difficult to explore textually, and recursion trees are more of an "art" than a science.
 The formal recurrence substitutions were already covered to a certain extent in the previous section.
+
+
+## 4.5
+
+#### 1
+  - a) $$
+  \begin{aligned}
+    T(n) &= 2T(n / 4) + 1\\
+    n^{log_{4} 2} &= \sqrt{n}\\
+    1 &= O(n^{\frac{1}{2} - \frac{1}{2}}) \implies T(n) = \Theta(\sqrt{n})
+  \end{aligned}
+  $$
+  - b) $$
+  \begin{aligned}
+    T(n) &= 2T(n / 4) + \sqrt{n}\\
+    T(n) &= \Theta(\sqrt{n} lg n)
+  \end{aligned}
+  $$
+  - c) $$
+  \begin{aligned}
+    T(n) &= 2T(n/4) + n\\
+    n &= \Omega(n^{\frac{1}{2} + \frac{1}{2}})\\
+    \frac{n}{2} &= O(n)\\
+    T(n) = \Theta(n)
+  \end{aligned}
+  $$
+  - d) $$
+  \begin{aligned}
+    T(n) = 2T(n / 4) + n^2\\
+    T(n) = \Theta(n^2)
+  \end{aligned}
+  $$
