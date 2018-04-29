@@ -175,3 +175,106 @@ The formal recurrence substitutions were already covered to a certain extent in 
 #### 2
 For $a = 50$, $log_{4} a > log_{2} 7$, so $a = 49$ is the largest such that
 $T(n) = aT(n / 4) + \Theta(n^2) is asymptotically faster than Strassen's algorithm.
+
+
+#### 3
+$$
+T(n) = T(n / 2) + \Theta(1)\\
+n^{log_{2} 1} = n^0 = 1\\
+T(n) = \Theta(lg n)
+$$
+
+
+#### 4
+It can't be applied to $T(n) = 4T(n / 2) + n^2 lg n$
+since $n^{lg_{2} 4} = n^2$ isn't polynomially smaller than $n^2 lg n$.
+
+We can however provide an upper bound of $O((n lg n)^2)$ using a recursion tree.
+
+
+## 4.6
+
+#### 3
+We want to show that
+$a f(n / b) \le c f(n) \implies \exists \epsilon > 0, f(n) = \Omega(n^{lg_{b} a + \epsilon)$.
+First assume that the latter is false, and let $f(n) = O(n^{lg_{b} a}).
+
+Then we have:
+$$
+a (\frac{n}{b})^{lg_{b} a} \le c n^{lg_{b} a}\\
+n^{lg_{b} a} \le c n^{lg_{b} a}\\
+1 \le c
+$$
+But, $c < 1$, so we have a contradiction. This means that the implication must be true.
+
+
+## Problems
+
+#### 1
+- a) $$
+  T(n) = 2T(n / 2) + n^4\\
+  n^{lg_{2} 2} = n\\
+  n^4 = \Omega(n^{1 + 3})\\
+  \frac{a}{b^4} n^4 \le c n^4\\
+  T(n) = \Theta(n^4)
+  $$
+- b) $$
+  T(n) = T(7n / 10) + n\\
+  n^{lg_{b} a} = n^0 = 1\\
+  n = \Omega(n^{0 + 1})\\
+  \frac{a}{b} n \le c n\\
+  T(n) = \Theta(n)
+  $$
+- c) $$
+  T(n) = 16 T(n / 4) + n^2\\
+  n^{lg_{4} 16} = n^2\\
+  T(n) = \Theta(n^2 lg n)
+  $$
+- d) $$
+  T(n) = 7T(n / 3) + n^2\\
+  n^{lg_{3} 7} = \approx n^{1.77}\\
+  \frac{7}{9} n^2 \le c n^2\\
+  n^2 = \Omega(n^{1.77 + \epsilon})\\
+  T(n) = \Theta(n^2)
+  $$
+- e) $$
+  7T(n / 2) + n^2\\
+  n^{lg_{2} 7} \approx n^{2.8}\\
+  n^2 = O(n^{2.8 - \epsilon})\\
+  T(n) = \Theta(n^{lg_{2} 7})
+  $$
+- f) $$
+  T(n) = 2 T(n / 4) + \sqrt{n}\\
+  T(n) = \Theta(\sqrt{n})\\
+  $$
+- g) $$
+  T(n) = T(n - 2) + n^2 = n^2 + (n - 2)^2 + \cdots\\
+  T(n) = \Theta(n^2)
+  $$
+
+
+#### 2
+- a) $\Theta(lg n)$, $\Theta(n)$, and $\Theta(n)$.
+
+- b) For merge sort, we have $T(n) = 2 T(n / 2) + n$.
+  Adding an extra linear term at each level doesn't actually change anything.
+
+#### 3
+- a) $T(n) = 4 T(n / 3) + n lg n \implies T(n) = \Theta(n^{lg_{3} 4})$
+
+- b) $T(n) = 3 T(n / 3) + n lg n \implies T(n) = \Theta(n lg^2 n)$
+
+- c) $T(n) = 4 T(n / 2) + n^2 \sqrt{n} \implies T(n) = \Theta(n^2 \sqrt{n})$
+
+- d) $T(n) = 3T(\frac{n}{3} - 2) + \frac{n}{2} \implies T(n) = \Theta(n lg n)$
+
+- e) $T(n) = 2 T(n / 2) + \frac{n}{lg n} \implies T(n) = \Theta(n)$
+
+- f) $T(n) = T(n / 2) + n lg n \implies T(n) = \Theta(\frac{n}{lg n})$
+
+- g) $T(n) = T(n - 1) + \frac{1}{n} \implies T(n) = \Theta(1)$
+
+- h) $T(n) = T(n - 1) + lg n \implies T(n) = \Theta(lg^2 n)$
+
+- i) $T(n) = T(n - 2) + \frac{1}{lg n} \implies T(n) = \Theta(1)$
+
